@@ -9,19 +9,19 @@ metadata:
     name: argocd-demo
 spec:
   project: argocd-demo
-
+# REPOSITORIO y PATHS
   source:
-    repoURL: https://github.com/The-Automation-Rules/argocd-demo.git
+    repoURL: https://github.com/MrBorderline/argocd.git
     targetRevision: main
     path: official/examples/helm-guestbook
     helm:
       valueFiles:
         - values-test.yaml
-
+# DESTINO DE CLUSTERS
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd-demo
-
+# SYNC POLICIES 
   syncPolicy:
     automated:
       prune: true

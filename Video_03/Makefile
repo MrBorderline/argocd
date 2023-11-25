@@ -9,9 +9,9 @@ minikubestart:
 installargo:
 	@echo "| > INSTALACION DE ARGOCD"
 	helm install argo-cd ../Video_02/argo-cd/ \
-      --namespace argocd \
-      --create-namespace --wait \
-      -f ../Video_02/argo-cd/values-custom.yaml
+    	--namespace argocd \
+    	--create-namespace --wait \
+    	-f ../Video_02/argo-cd/values-custom.yaml
 
 project:
 	@echo "| > CREACION DE PROYECTO DEMO"
