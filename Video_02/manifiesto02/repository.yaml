@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: helloworld
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  name: argocd-demo
+  url: https://github.com/MrBorderline/argocd.git
+  password: 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
