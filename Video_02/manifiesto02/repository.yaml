@@ -6,6 +6,6 @@ metadata:
   labels:
     argocd.argoproj.io/secret-type: repository
 stringData:
-  name: argocd-demo
+  name: helloworld
   url: https://github.com/MrBorderline/argocd.git
   password: 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
