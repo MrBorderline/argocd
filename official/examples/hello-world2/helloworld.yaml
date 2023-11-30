@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld2
+spec:
+  selector:
+    matchLabels:
+      app: helloworld2
+  replicas: 3 # tells deployment to run 1 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: helloworld2
+    spec:
+      containers:
+      - name: helloworld2
+        image: karthequian/helloworld:latest
+        ports:
+        - containerPort: 80

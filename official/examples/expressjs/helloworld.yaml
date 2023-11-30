@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: expressjs
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: expressjs
+  name: expressjs
+spec:
+  selector:
+    matchLabels:
+      app: expressjs
+  replicas: 3 # tells deployment to run 1 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: expressjs
+    spec:
+      containers:
+      - name: expressjs
+        image: borderlinejp17/expressjs:latest
+        ports:
+        - containerPort: 80
